@@ -1721,7 +1721,6 @@ function unityFramework(Module) {
         return WEBAudio.audioInstanceIdCounter
     }
 let xAd = 0;
-let xAd2 = 0;
     function _JS_Sound_GetLength(bufferInstance) {
         if (WEBAudio.audioWebEnabled == 0) return 0;
 
@@ -1729,25 +1728,19 @@ let xAd2 = 0;
 
 		if (bufferInstance == 4 ) {   
 
-		xAd2 = xAd2 + 1;
+		xAd = xAd + 1;
 
-		if (xAd2 == 3 ){ 
-		//console.log("Showing Ad " + " xAd2 is = " + xAd2 + ". Vari is = " + Vari);
+		if (xAd == 2 ){ 
+		//console.log("Showing Ad " + " xAd is = " + xAd + ". Vari is = " + Vari);
 
 		window.location.href = "html5player://showInterstitial";
-		xAd2 = 0;
+		xAd = 0;
 		                }
 		                             }
 		
 		
 		
-		if (bufferInstance == 1 ) {  
-		xAd = xAd + 1; 
-		if (xAd == 4 ) { 
-		//window.location.href = "html5player://showInterstitial"; 
-		xAd = 0;
-		} 
-		 }
+		
         var soundClip = WEBAudio.audioInstances[bufferInstance];
         return soundClip.getLength()
     }
