@@ -1722,7 +1722,6 @@ function unityFramework(Module) {
     }
 let xAd = 0;
 let xAd2 = 0;
-let Vari = 4;
     function _JS_Sound_GetLength(bufferInstance) {
         if (WEBAudio.audioWebEnabled == 0) return 0;
 
@@ -1732,16 +1731,13 @@ let Vari = 4;
 
 		xAd2 = xAd2 + 1;
 
-		if (xAd2 == Vari ){ 
-		console.log("Showing Ad " + " xAd2 is = " + xAd2 + ". Vari is = " + Vari);
+		if (xAd2 == 3 ){ 
+		//console.log("Showing Ad " + " xAd2 is = " + xAd2 + ". Vari is = " + Vari);
+
 		window.location.href = "html5player://showInterstitial";
 		xAd2 = 0;
-		Vari = Vari - 1;
-		if ( Vari <= 2 ) { Vari = 2; }
-
-		}
-		  
-		}
+		                }
+		                             }
 		
 		
 		
